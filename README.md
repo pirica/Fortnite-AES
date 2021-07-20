@@ -1,6 +1,6 @@
 ##=====Fortnite AES Grabber: NuGet=====
 
-[![Nuget](https://img.shields.io/nuget/v/Fortnite-AES?style=flat-square)](https://www.nuget.org/packages/Fortnite.AES)
+[![Nuget](https://img.shields.io/nuget/v/Fortnite.AES?style=flat-square)](https://www.nuget.org/packages/Fortnite.AES)
 
 Grabs the latest AES keys for Fortnite (The Video Game).
 
