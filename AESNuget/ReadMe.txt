@@ -12,6 +12,9 @@ AESGrabber.WriteKeysToFile(string path)
 AESGrabber.GetMainKey()
 -Attempts to get the latest main AES key.
 
+AESGrabber.GetKey(string FileName)
+-Gets an AES key for a specified Fortnite Pak file
+
 Fortnite is a trademark and is a copyrighted work of Epic Games, Inc. All rights reserved by Epic Games, Inc. This material is not official and is not
 endorsed by Epic Games, Inc.
 

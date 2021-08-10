@@ -58,5 +58,23 @@ namespace FortniteAES.Grabber
 
             return key;
         }
+
+        public static string GetKey(string FileName)
+        {
+            var requested = FileName;
+
+            var wc = new WebClient();
+            var keys = wc.DownloadString(aesurl).Split(new[] { '\r', '\n' })[0].Replace(",", "\n");
+
+            string keywithextra = keys.Remove(0, keys.IndexOf(requested, 0));
+
+            var keywithextraonend = keywithextra.Remove(0, requested.Length + 3);
+
+            int length = keywithextraonend.Length;
+
+            var key = keywithextraonend.Remove(66, length - 66);
+
+            return key;
+        }
     }
 }
