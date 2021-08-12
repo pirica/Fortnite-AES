@@ -1,31 +1,31 @@
 ﻿using System.IO;
 using System.Net;
 
-namespace FortniteAES.Grabber
+namespace FortniteAES.AESHistory
 {
-    public class AESGrabber
+    public class AESHistory
     {
         const string aesurl = @"https://benbot.app/api/v1/aes";
 
-        public static string GetKeys()
+        public static string GetOldKeys(string version)
         {
             var wc = new WebClient();
-            var keys = wc.DownloadString(aesurl).Split(new[] { '\r', '\n' })[0].Replace(",", "\n");
+            var keys = wc.DownloadString(aesurl + "?version=" + version).Split(new[] { '\r', '\n' })[0].Replace(",", "\n");
             return keys;
         }
 
-        public static string WriteKeysToFile(string path)
+        public static string WriteOldKeysToFile(string version, string path)
         {
             var wc = new WebClient();
-            var keys = wc.DownloadString(aesurl).Split(new[] { '\r', '\n' })[0].Replace(",", "\n");
+            var keys = wc.DownloadString(aesurl + "?version=" + version).Split(new[] { '\r', '\n' })[0].Replace(",", "\n");
             File.WriteAllText(path, keys);
             return path;
         }
 
-        public static string GetMainKey()
+        public static string GetOldMainKey(string version)
         {
             var wc = new WebClient();
-            var keys = wc.DownloadString(aesurl).Split(new[] { '\r', '\n' })[0].Replace(",", "\n");
+            var keys = wc.DownloadString(aesurl + "?version=" + version).Split(new[] { '\r', '\n' })[0].Replace(",", "\n");
 
             var keywithextra = keys.Remove(0, 69);
             int noofchar = 0;
@@ -59,12 +59,12 @@ namespace FortniteAES.Grabber
             return key;
         }
 
-        public static string GetKey(string FileName)
+        public static string GetOldKey(string version, string FileName)
         {
             var requested = FileName;
 
             var wc = new WebClient();
-            var keys = wc.DownloadString(aesurl).Split(new[] { '\r', '\n' })[0].Replace(",", "\n");
+            var keys = wc.DownloadString(aesurl + "?version=" + version).Split(new[] { '\r', '\n' })[0].Replace(",", "\n");
 
             string keywithextra = keys.Remove(0, keys.IndexOf(requested, 0));
 

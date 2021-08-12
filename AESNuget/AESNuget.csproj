@@ -8,12 +8,16 @@
     <PackageId>Fortnite.AES</PackageId>
     <Authors>TS1</Authors>
     <Product>Fortnite AES Grabber</Product>
-    <Description>Grabs the latest AES keys for Fortnite (The Video Game)</Description>
+    <Description>Grabs AES keys for Fortnite (The Video Game)</Description>
     <Copyright>2021</Copyright>
-    <PackageTags>Fortnite AES</PackageTags>
-    <Version>1.3</Version>
-    <PackageReleaseNotes>Release Patch</PackageReleaseNotes>
+    <PackageTags>Fortnite AES BenBot</PackageTags>
+    <Version>2.0</Version>
+    <PackageReleaseNotes>Now allows the ability to grab AES keys for some older versions of Fortnite.</PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <FileVersion>2.0.0.0</FileVersion>
+    <PackageProjectUrl>https://github.com/TheSingleOneYT/Fortnite-AES</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/TheSingleOneYT/Fortnite-AES</RepositoryUrl>
   </PropertyGroup>
 	<ItemGroup>
 		<Content Include="ReadMe.txt">
